@@ -41,6 +41,40 @@ public:
         cout << "Elemento " << valor << " insertado en la lista.\n";
     }
 
+    bool eliminar(int valor) {
+        if (estaVacia()) return false;
+
+        if (cabeza->dato == valor) {
+            Nodo* temp = cabeza;
+            cabeza = cabeza->siguiente;
+            delete temp;
+            return true;
+        }
+
+        Nodo* actual = cabeza;
+        while (actual->siguiente != nullptr && actual->siguiente->dato != valor) {
+            actual = actual->siguiente;
+        }
+
+        if (actual->siguiente != nullptr) {
+            Nodo* temp = actual->siguiente;
+            actual->siguiente = actual->siguiente->siguiente;
+            delete temp;
+            return true;
+        }
+
+        return false;
+    }
+
+    bool buscar(int valor) const {
+        Nodo* actual = cabeza;
+        while (actual != nullptr) {
+            if (actual->dato == valor) return true;
+            actual = actual->siguiente;
+        }
+        return false;
+    }
+
     // Recorrido seguro mediante un callback para no exponer la estructura interna
     void recorrer(void (*accion)(int)) const {
         for (Nodo* actual = cabeza; actual != nullptr; actual = actual->siguiente) {
@@ -64,18 +98,68 @@ public:
     }
 };
 
+class MenuListaPunteros {
+public:
+    static void ejecutar() {
+        ListaDinamica miLista;
+        int opcion, valor;
+
+        do {
+            cout << "\n=== MENU LISTA DINAMICA CON PUNTEROS (POO) ===\n";
+            cout << "1. Insertar elemento\n";
+            cout << "2. Eliminar elemento\n";
+            cout << "3. Buscar elemento\n";
+            cout << "4. Mostrar lista\n";
+            cout << "0. Salir\n";
+            cout << "Seleccione una opcion: ";
+            cin >> opcion;
+
+            switch (opcion) {
+                case 1:
+                    cout << "Ingrese el valor a insertar: ";
+                    cin >> valor;
+                    miLista.insertar(valor);
+                    break;
+                case 2:
+                    if (miLista.estaVacia()) {
+                        cout << "La lista esta vacia.\n";
+                    } else {
+                        cout << "Ingrese el valor a eliminar: ";
+                        cin >> valor;
+                        if (miLista.eliminar(valor)) {
+                            cout << "Elemento " << valor << " eliminado correctamente.\n";
+                        } else {
+                            cout << "Elemento no encontrado en la lista.\n";
+                        }
+                    }
+                    break;
+                case 3:
+                    if (miLista.estaVacia()) {
+                        cout << "La lista esta vacia.\n";
+                    } else {
+                        cout << "Ingrese el valor a buscar: ";
+                        cin >> valor;
+                        if (miLista.buscar(valor)) {
+                            cout << "¡Elemento " << valor << " encontrado en la lista!\n";
+                        } else {
+                            cout << "El elemento " << valor << " no esta en la lista.\n";
+                        }
+                    }
+                    break;
+                case 4:
+                    VisualizadorLista::mostrar(miLista);
+                    break;
+                case 0:
+                    cout << "Saliendo del programa...\n";
+                    break;
+                default:
+                    cout << "Opcion no valida. Intente de nuevo.\n";
+            }
+        } while (opcion != 0);
+    }
+};
+
 int main() {
-    cout << "=== EJERCICIO 7 BIS: LISTA DINAMICA CON PUNTEROS (POO) ===" << endl;
-    
-    ListaDinamica miLista;
-
-    // Insertando elementos de prueba
-    miLista.insertar(10);
-    miLista.insertar(20);
-    miLista.insertar(30);
-
-    // Mostrando la lista resultante mediante la clase VisualizadorLista
-    VisualizadorLista::mostrar(miLista);
-
+    MenuListaPunteros::ejecutar();
     return 0;
 }
