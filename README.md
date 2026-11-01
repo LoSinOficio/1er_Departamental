@@ -1,31 +1,32 @@
 # Reporte de Prácticas de Programación
 
-## 1. Carátula
+## Carátula
 
 | Dato | Información |
 | --- | --- |
-| Institución | [Nombre de la institución] |
-| Asignatura | Programación |
-| Trabajo | Prácticas de programación en C++ |
+| Institución | [Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas] |
+| Asignatura | Abstracción y Uso de Datos |
+| Trabajo | Prácticas de programación en PE y POO |
 | Periodo | Prácticas de primer y segundo parcial |
-| Estudiante | [Nombre del estudiante] |
+| Equipo  | [Los Sin Oficio] |
+| Integrantes  | [Cruz Montalvo Erick Itzmin
+-j 
+-t ] |
 | Docente | [Nombre del docente] |
 | Fecha de entrega | [Día/mes/año] |
 | Repositorio | [Enlace al repositorio de GitHub] |
 
 > Completa los campos entre corchetes antes de entregar el reporte.
 
-## 2. Índice
+## Índice
 
-1. [Carátula](#1-carátula)
-2. [Índice](#2-índice)
-3. [Desarrollo](#3-desarrollo)
-4. [Solución de las prácticas y código esencial](#4-solución-de-las-prácticas-y-código-esencial)
-5. [Compilación y ejecución](#5-compilación-y-ejecución)
-6. [Conclusiones](#6-conclusiones)
-7. [Referencias del repositorio](#7-referencias-del-repositorio)
+1. [Desarrollo](#1-desarrollo)
+2. [Solución de las prácticas y código esencial](#2-solución-de-las-prácticas-y-código-esencial)
+3. [Compilación y ejecución](#3-compilación-y-ejecución)
+4. [Conclusiones](#4-conclusiones)
+5. [Referencias del repositorio](#5-referencias-del-repositorio)
 
-## 3. Desarrollo
+## 1. Desarrollo
 
 ### Descripción del trabajo
 
@@ -58,7 +59,7 @@ Estos conceptos permiten dividir un problema en pasos, representar y procesar da
 - Estructuras de datos y operaciones con bits.
 - Contenedores de la biblioteca estándar de C++ (STL).
 
-## 4. Solución de las prácticas y código esencial
+## 2. Solución de las prácticas y código esencial
 
 La solución de cada ejercicio se encuentra en el archivo enlazado en las tablas de referencia. La clasificación y descripción siguen la tabla de prácticas compartida; la última columna conserva el valor de POO indicado en esa referencia. Los siguientes fragmentos muestran dos ideas implementadas en este repositorio: la creación y uso de un objeto, y la inserción de elementos en una lista de la STL.
 
@@ -155,7 +156,7 @@ La siguiente secuencia corresponde a los ejercicios numerados del 1 al 10 en el 
 | 9 | Cola dinámica con STL | Usar el contenedor `queue` de la biblioteca estándar: [Practica 22_09.cpp](./Practica%2022_09.cpp) | 2 |
 | 10 | Lista dinámica con STL | Usar el contenedor `list` de la biblioteca estándar: [Practica 22_10.cpp](./Practica%2022_10.cpp) | 2 |
 
-## 5. Compilación y ejecución
+## 3. Compilación y ejecución
 
 Se requiere un compilador compatible con C++11 o posterior, como `g++`. Desde la carpeta del repositorio, compila un archivo a la vez:
 
@@ -177,11 +178,11 @@ En Linux o macOS:
 
 Para probar otra práctica, reemplaza el nombre del archivo fuente y el nombre del ejecutable. Cada archivo tiene su propio `main`, por lo que las prácticas deben compilarse de forma independiente.
 
-## 6. Conclusiones
+## 4. Conclusiones
 
 El conjunto de prácticas ofrece una aplicación gradual de conceptos de C++: desde instrucciones y funciones hasta clases, colecciones y estructuras de datos. Mantener cada ejercicio en un archivo separado permite estudiar las soluciones individualmente y ejecutar ejemplos sin mezclar sus puntos de entrada.
 
-## 7. Referencias del repositorio
+## 5. Referencias del repositorio
 
 - Código fuente y soluciones: archivos `.cpp` enlazados en el índice de soluciones.
 - Biblioteca estándar de C++ utilizada por algunas prácticas: encabezados como `<iostream>`, `<string>`, `<list>` y `<algorithm>`.
