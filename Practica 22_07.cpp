@@ -39,6 +39,21 @@ public:
         cout << "Elemento " << valor << " agregado a la cola.\n";
     }
 
+    void desencolar() {
+        if (estaVacia()) return;
+        Nodo* temp = frente;
+        frente = frente->siguiente;
+        if (frente == nullptr) {
+            final = nullptr;
+        }
+        delete temp;
+    }
+
+    int obtenerFrente() const {
+        if (estaVacia()) return -1;
+        return frente->dato;
+    }
+
     // Método para exponer el frente de manera segura sin romper encapsulamiento
     void recorrer(void (*accion)(int)) const {
         for (Nodo* actual = frente; actual != nullptr; actual = actual->siguiente) {
@@ -62,18 +77,57 @@ public:
     }
 };
 
+class MenuColaPunteros {
+public:
+    static void ejecutar() {
+        ColaDinamica miCola;
+        int opcion, valor;
+
+        do {
+            cout << "\n=== MENU COLA DINAMICA CON PUNTEROS (POO) ===\n";
+            cout << "1. Encolar (push)\n";
+            cout << "2. Desencolar (pop)\n";
+            cout << "3. Consultar frente\n";
+            cout << "4. Mostrar cola\n";
+            cout << "0. Salir\n";
+            cout << "Seleccione una opcion: ";
+            cin >> opcion;
+
+            switch (opcion) {
+                case 1:
+                    cout << "Ingrese el valor a encolar: ";
+                    cin >> valor;
+                    miCola.encolar(valor);
+                    break;
+                case 2:
+                    if (miCola.estaVacia()) {
+                        cout << "La cola esta vacia. No se puede desencolar.\n";
+                    } else {
+                        cout << "Elemento eliminado del frente: " << miCola.obtenerFrente() << "\n";
+                        miCola.desencolar();
+                    }
+                    break;
+                case 3:
+                    if (miCola.estaVacia()) {
+                        cout << "La cola esta vacia.\n";
+                    } else {
+                        cout << "Elemento al frente: " << miCola.obtenerFrente() << "\n";
+                    }
+                    break;
+                case 4:
+                    VisualizadorCola::mostrar(miCola);
+                    break;
+                case 0:
+                    cout << "Saliendo del programa...\n";
+                    break;
+                default:
+                    cout << "Opcion no valida. Intente de nuevo.\n";
+            }
+        } while (opcion != 0);
+    }
+};
+
 int main() {
-    cout << "=== EJERCICIO 7: COLA DINAMICA CON PUNTEROS (POO) ===" << endl;
-    
-    ColaDinamica miCola;
-
-    // Inserción de elementos de prueba
-    miCola.encolar(100);
-    miCola.encolar(200);
-    miCola.encolar(300);
-
-    // Mostrar estructura usando la clase VisualizadorCola
-    VisualizadorCola::mostrar(miCola);
-
+    MenuColaPunteros::ejecutar();
     return 0;
 }
