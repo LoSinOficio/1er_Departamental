@@ -14,6 +14,17 @@ public:
         cout << "Elemento " << valor << " apilado en la cima.\n";
     }
 
+    void desapilar() {
+        if (!pila.empty()) {
+            pila.pop();
+        }
+    }
+
+    int obtenerCima() const {
+        if (pila.empty()) return -1;
+        return pila.top();
+    }
+
     bool estaVacia() const {
         return pila.empty();
     }
@@ -41,18 +52,57 @@ public:
     }
 };
 
+class MenuPilaSTL {
+public:
+    static void ejecutar() {
+        PilaDinamicaSTL miPila;
+        int opcion, valor;
+
+        do {
+            cout << "\n=== MENU PILA DINAMICA CON STL (POO) ===\n";
+            cout << "1. Apilar (push)\n";
+            cout << "2. Desapilar (pop)\n";
+            cout << "3. Consultar cima (top)\n";
+            cout << "4. Mostrar pila\n";
+            cout << "0. Salir\n";
+            cout << "Seleccione una opcion: ";
+            cin >> opcion;
+
+            switch (opcion) {
+                case 1:
+                    cout << "Ingrese el valor a apilar: ";
+                    cin >> valor;
+                    miPila.apilar(valor);
+                    break;
+                case 2:
+                    if (miPila.estaVacia()) {
+                        cout << "La pila esta vacia. No se puede desapilar.\n";
+                    } else {
+                        cout << "Elemento desapilado de la cima: " << miPila.obtenerCima() << "\n";
+                        miPila.desapilar();
+                    }
+                    break;
+                case 3:
+                    if (miPila.estaVacia()) {
+                        cout << "La pila esta vacia.\n";
+                    } else {
+                        cout << "Elemento en la cima: " << miPila.obtenerCima() << "\n";
+                    }
+                    break;
+                case 4:
+                    VisualizadorPila::mostrar(miPila);
+                    break;
+                case 0:
+                    cout << "Saliendo del programa...\n";
+                    break;
+                default:
+                    cout << "Opcion no valida. Intente de nuevo.\n";
+            }
+        } while (opcion != 0);
+    }
+};
+
 int main() {
-    cout << "=== EJERCICIO 8: PILA DINAMICA CON LIBRERIA DEL IDE / STL (POO) ===" << endl;
-    
-    PilaDinamicaSTL miPila;
-
-    // Inserción de elementos de prueba
-    miPila.apilar(10);
-    miPila.apilar(20);
-    miPila.apilar(30);
-
-    // Mostrar estructura usando la clase VisualizadorPila
-    VisualizadorPila::mostrar(miPila);
-
+    MenuPilaSTL::ejecutar();
     return 0;
 }
