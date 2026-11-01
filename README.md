@@ -15,7 +15,6 @@
 | Docente | Yventz Entzana Garduño |
 | Repositorio | https://github.com/LoSinOficio/Practicas_Abstraccion_y_Uso_de_Datos.git |
 
-> Completa los campos entre corchetes antes de entregar el reporte.
 
 ## Índice
 
