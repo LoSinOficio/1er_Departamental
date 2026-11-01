@@ -4,17 +4,16 @@
 
 | Dato | Información |
 | --- | --- |
-| Institución | [Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas] |
+| Institución | Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas |
 | Asignatura | Abstracción y Uso de Datos |
 | Trabajo | Prácticas de programación en PE y POO |
 | Periodo | Prácticas de primer y segundo parcial |
-| Equipo  | [Los Sin Oficio] |
-| Integrantes  | [Cruz Montalvo Erick Itzmin
+| Equipo  | Los Sin Oficio |
+| Integrantes  | Cruz Montalvo Erick Itzmin
 -j 
--t ] |
-| Docente | [Nombre del docente] |
-| Fecha de entrega | [Día/mes/año] |
-| Repositorio | [Enlace al repositorio de GitHub] |
+-t  |
+| Docente | Yventz Entzana Garduño |
+| Repositorio | https://github.com/LoSinOficio/Practicas_Abstraccion_y_Uso_de_Datos.git |
 
 > Completa los campos entre corchetes antes de entregar el reporte.
 
