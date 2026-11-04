@@ -9,9 +9,10 @@
 | Trabajo | Prácticas de programación en PE y POO |
 | Periodo | Prácticas de primer y segundo parcial |
 | Equipo  | Los Sin Oficio |
-| Integrantes  | Cruz Montalvo Erick Itzmin
--j 
--t  |
+| Integrantes  | Cruz Montalvo Erick Itzmin|
+|   | Murillo Sanchez Fatima Mariana|
+|   | Pérez Rivera Leia Michelle|
+
 | Docente | Yventz Entzana Garduño |
 | Repositorio | https://github.com/LoSinOficio/Practicas_Abstraccion_y_Uso_de_Datos.git |
 
