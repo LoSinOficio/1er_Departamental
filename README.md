@@ -12,7 +12,6 @@
 | Integrantes  | Cruz Montalvo Erick Itzmin|
 |   | Murillo Sanchez Fatima Mariana|
 |   | Pérez Rivera Leia Michelle|
-
 | Docente | Yventz Entzana Garduño |
 | Repositorio | https://github.com/LoSinOficio/Practicas_Abstraccion_y_Uso_de_Datos.git |
 
