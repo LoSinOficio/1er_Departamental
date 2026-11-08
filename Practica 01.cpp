@@ -7,7 +7,7 @@ class Mensaje {
 public:
     // Método que imprime el texto
     void saludar() {
-        cout << "Hola mundo" << endl;
+        cout << "Hola mundo jejeje " << endl;
     }
 };
 
