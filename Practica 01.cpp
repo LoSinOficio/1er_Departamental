@@ -11,6 +11,7 @@ public:
     }
 };
 
+
 int main() {
     // 1. Creamos el objeto de la clase Mensaje
     Mensaje miObjeto;
