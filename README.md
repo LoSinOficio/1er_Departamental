@@ -6,14 +6,13 @@
 | --- | --- |
 | Institución | Unidad Profesional Interdisciplinaria de Ingeniería y Ciencias Sociales y Administrativas |
 | Asignatura | Abstracción y Uso de Datos |
-| Trabajo | Prácticas de programación en PE y POO |
-| Periodo | Prácticas de primer y segundo parcial |
+| Periodo | Prácticas del primer parcial |
 | Equipo  | Los Sin Oficio |
 | Integrantes  | Cruz Montalvo Erick Itzmin|
 |   | Murillo Sanchez Fatima Mariana|
 |   | Pérez Rivera Leia Michelle|
 | Docente | Yventz Entzana Garduño |
-| Repositorio | https://github.com/LoSinOficio/Practicas_Abstraccion_y_Uso_de_Datos.git |
+| Repositorio | https://github.com/LoSinOficio/1er_Departamental.git |
 
 
 ## Índice
@@ -28,7 +27,7 @@
 
 ### Descripción del trabajo
 
-Este repositorio reúne los programas elaborados para las prácticas de programación de primero y segundo parcial. Cada archivo `.cpp` contiene una práctica independiente que se puede consultar, compilar y ejecutar por separado. En conjunto, los ejercicios trabajan fundamentos de C++, programación estructurada y programación orientada a objetos.
+Este repositorio reúne los programas elaborados para las prácticas de programación del primer parcial. Cada archivo `.cpp` contiene una práctica independiente que se puede consultar, compilar y ejecutar por separado. En conjunto, los ejercicios trabajan fundamentos de C++, programación estructurada y programación orientada a objetos.
 
 ### Objetivo
 
@@ -59,7 +58,7 @@ Estos conceptos permiten dividir un problema en pasos, representar y procesar da
 
 ## 2. Solución de las prácticas y código esencial
 
-La solución de cada ejercicio se encuentra en el archivo enlazado en las tablas de referencia. La clasificación y descripción siguen la tabla de prácticas compartida; la última columna conserva el valor de POO indicado en esa referencia. Los siguientes fragmentos muestran dos ideas implementadas en este repositorio: la creación y uso de un objeto, y la inserción de elementos en una lista de la STL.
+La solución de cada ejercicio se encuentra en el archivo enlazado en las tablas de referencia. La clasificación y descripción siguen la tabla de prácticas compartida; la última columna conserva el valor de POO indicado en esa referencia. A continuación se presenta un ejemplo básico del repositorio para ilustrar la creación y uso de un objeto.
 
 ### Ejemplo 1: clase y objeto
 
@@ -82,28 +81,6 @@ int main() {
 
 La clase `Mensaje` reúne el comportamiento `saludar`; `main` crea `miObjeto` y utiliza el operador punto para llamar al método. Al ejecutar el programa, se muestra `Hola mundo`.
 
-### Ejemplo 2: lista dinámica con STL
-
-En [Practica 22_10.cpp](./Practica%2022_10.cpp) se utiliza `std::list<int>` para almacenar enteros y se encapsulan las operaciones de inserción en métodos:
-
-```cpp
-class ListaDinamicaSTL {
-private:
-	list<int> elementos;
-
-public:
-	void agregarAlFinal(int valor) {
-		elementos.push_back(valor);
-	}
-
-	void agregarAlFrente(int valor) {
-		elementos.push_front(valor);
-	}
-};
-```
-
-La lista administra dinámicamente sus elementos. `push_back` agrega al final y `push_front` al inicio; la práctica completa también incluye búsqueda, eliminación, visualización y un menú de consola.
-
 ### Matriz de prácticas: primer parcial
 
 | Ejercicio | Concepto general | Práctica / solución | POO |
@@ -124,35 +101,6 @@ La lista administra dinámicamente sus elementos. `push_back` agrega al final y 
 | 13 | Tipo de dato con puntero al arreglo | Acceder indirectamente a los elementos de la colección de personas: [Practica 13.cpp](./Practica%2013.cpp) | 1 |
 | 14 | Recursividad | Resolver factorial, Fibonacci y operaciones sucesivas de la calculadora mediante recursión: [Practica 14.cpp](./Practica%2014.cpp) | 1 |
 | 15 | Recursividad y fractales | Generar fractales como el triángulo de Sierpinski y el polvo de Cantor: [Practica 15.cpp](./Practica%2015.cpp) | 1 |
-
-### Matriz de prácticas: segundo parcial
-
-| Ejercicio | Concepto general | Práctica / solución | POO |
-| --- | --- | --- | ---: |
-| 16 | Ordenamiento burbuja | Ordenar caracteres, enteros y datos de un tipo creado: [Practica 16.cpp](./Practica%2016.cpp) | 2 |
-| 17 | Merge sort | Ordenar caracteres, enteros y datos de un tipo creado: [Practica 17.cpp](./Practica%2017.cpp) | 2 |
-| 18 | Ordenamiento rápido | Ordenar caracteres, enteros y datos de un tipo creado: [Practica 18.cpp](./Practica%2018.cpp) | 2 |
-| 19 | Ordenamiento indirecto | Aplicar burbuja a los datos mediante acceso indirecto: [Practica 19.cpp](./Practica%2019.cpp) | 2 |
-| 20 | Ordenamiento indirecto | Aplicar mezcla (merge sort) mediante acceso indirecto: [Practica 20.cpp](./Practica%2020.cpp) | 2 |
-| 21 | Ordenamiento indirecto | Aplicar ordenamiento rápido (quick sort) mediante acceso indirecto: [Practica 21.cpp](./Practica%2021.cpp) | 2 |
-
-### Estructuras de datos: ejercicios complementarios
-
-La siguiente secuencia corresponde a los ejercicios numerados del 1 al 10 en el bloque de estructuras de datos de la referencia. En el repositorio se identifican con el prefijo `Practica 22_`.
-
-| Ejercicio | Concepto general | Práctica / solución | POO |
-| --- | --- | --- | ---: |
-| 1 | Punteros y tipos autorreferenciados | Relacionar datos del mismo tipo mediante un puntero: [Practica 22_01.cpp](./Practica%2022_01.cpp) | 2 |
-| 2 | Tipo de dato abstracto (ADT) | Encapsular los datos y operaciones de una cuenta bancaria: [Practica 22_02.cpp](./Practica%2022_02.cpp) | 2 |
-| 3 | Pila estática | Implementar una pila con un arreglo: [Practica 22_03.cpp](./Practica%2022_03.cpp) | 2 |
-| 4 | Cola estática | Implementar una cola con un arreglo: [Practica 22_04.cpp](./Practica%2022_04.cpp) | 2 |
-| 5 | Lista estática | Implementar una lista con un arreglo: [Practica 22_05.cpp](./Practica%2022_05.cpp) | 2 |
-| 6 | Pila dinámica | Implementar una pila enlazada con nodos y punteros: [Practica 22_06.cpp](./Practica%2022_06.cpp) | 2 |
-| 7 | Cola dinámica | Implementar una cola enlazada con nodos y punteros: [Practica 22_07.cpp](./Practica%2022_07.cpp) | 2 |
-| 7 bis | Lista dinámica | Implementar una lista enlazada con nodos y punteros: [Practica 22_07bits.cpp](./Practica%2022_07bits.cpp) | 2 |
-| 8 | Pila dinámica con STL | Usar el contenedor `stack` de la biblioteca estándar: [Practica 22_08.cpp](./Practica%2022_08.cpp) | 2 |
-| 9 | Cola dinámica con STL | Usar el contenedor `queue` de la biblioteca estándar: [Practica 22_09.cpp](./Practica%2022_09.cpp) | 2 |
-| 10 | Lista dinámica con STL | Usar el contenedor `list` de la biblioteca estándar: [Practica 22_10.cpp](./Practica%2022_10.cpp) | 2 |
 
 ## 3. Compilación y ejecución
 
